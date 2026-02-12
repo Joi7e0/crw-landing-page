@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://github.com/Joi7e0/crw-landing-page?tab=readme-ov-file
