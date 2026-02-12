@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://github.com/Joi7e0/crw-landing-page?tab=readme-ov-file
+Sitemap: https://your-username.github.io/repo-name/sitemap.xml
