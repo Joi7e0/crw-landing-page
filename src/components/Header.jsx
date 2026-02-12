@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const Header = () => {
+const Header = ({ toggleTheme, theme }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
@@ -9,6 +9,14 @@ const Header = () => {
     return (
         <header className="header" role="banner">
             <div className="container header-container">
+                <button
+                    className="theme-toggle"
+                    onClick={toggleTheme}
+                    aria-label="Перемкнути тему"
+                >
+                    {theme === 'dark' ? '☀️' : '🌙'}
+                </button>
+
                 <div className="logo-wrapper">
                     <img src="/logo.jpg" alt="Логотип Сумського Державного Університету" className="logo" />
                     <div className="logo-text">
@@ -17,15 +25,17 @@ const Header = () => {
                     </div>
                 </div>
 
-                <button
-                    className="mobile-menu-btn"
-                    onClick={toggleMenu}
-                    aria-label={isMenuOpen ? "Закрити меню" : "Відкрити меню"}
-                    aria-expanded={isMenuOpen}
-                    aria-controls="main-nav"
-                >
-                    <span className="menu-icon">{isMenuOpen ? '✕' : '☰'}</span>
-                </button>
+                <div className="header-actions">
+                    <button
+                        className="mobile-menu-btn"
+                        onClick={toggleMenu}
+                        aria-label={isMenuOpen ? "Закрити меню" : "Відкрити меню"}
+                        aria-expanded={isMenuOpen}
+                        aria-controls="main-nav"
+                    >
+                        <span className="menu-icon">{isMenuOpen ? '✕' : '☰'}</span>
+                    </button>
+                </div>
 
                 <nav
                     id="main-nav"
