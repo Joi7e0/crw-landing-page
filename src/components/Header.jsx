@@ -3,11 +3,14 @@ import { useState } from 'react';
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+    const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+    const closeMenu = () => setIsMenuOpen(false);
+
     return (
-        <header className="header">
+        <header className="header" role="banner">
             <div className="container header-container">
                 <div className="logo-wrapper">
-                    <img src="/logo.jpg" alt="Sumy State University Logo" className="logo" />
+                    <img src="/logo.jpg" alt="Логотип Сумського Державного Університету" className="logo" />
                     <div className="logo-text">
                         <span className="uni-name">СумДУ</span>
                         <span className="dept-name">Факультет ЕлІТ</span>
@@ -16,19 +19,25 @@ const Header = () => {
 
                 <button
                     className="mobile-menu-btn"
-                    onClick={() => setIsMenuOpen(!isMenuOpen)}
-                    aria-label="Toggle navigation"
+                    onClick={toggleMenu}
+                    aria-label={isMenuOpen ? "Закрити меню" : "Відкрити меню"}
+                    aria-expanded={isMenuOpen}
+                    aria-controls="main-nav"
                 >
-                    ☰
+                    <span className="menu-icon">{isMenuOpen ? '✕' : '☰'}</span>
                 </button>
 
-                <nav className={`nav ${isMenuOpen ? 'open' : ''}`}>
-                    <a href="#hero" onClick={() => setIsMenuOpen(false)}>Головна</a>
-                    <a href="#about" onClick={() => setIsMenuOpen(false)}>Про проєкт</a>
-                    <a href="#tasks" onClick={() => setIsMenuOpen(false)}>Завдання</a>
-                    <a href="#methodology" onClick={() => setIsMenuOpen(false)}>Архітектура</a>
-                    <a href="#results" onClick={() => setIsMenuOpen(false)}>Результати</a>
-                    <a href="#contact" onClick={() => setIsMenuOpen(false)}>Контакти</a>
+                <nav
+                    id="main-nav"
+                    className={`nav ${isMenuOpen ? 'open' : ''}`}
+                    aria-label="Основна навігація"
+                >
+                    <a href="#hero" onClick={closeMenu}>Головна</a>
+                    <a href="#about" onClick={closeMenu}>Про проєкт</a>
+                    <a href="#tasks" onClick={closeMenu}>Завдання</a>
+                    <a href="#methodology" onClick={closeMenu}>Архітектура</a>
+                    <a href="#results" onClick={closeMenu}>Модулі</a>
+                    <a href="#contact" onClick={closeMenu}>Контакти</a>
                 </nav>
             </div>
         </header>

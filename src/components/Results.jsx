@@ -13,7 +13,7 @@ const Results = () => {
     ];
 
     return (
-        <Section id="results" title="Функціональні Модулі" className="bg-alt">
+        <Section id="results" title="Функціональні Модулі" className="bg-alt" aria-labelledby="results-title">
             <div className="results-grid">
                 {modules.map((mod, index) => (
                     <div key={index} className="result-card">

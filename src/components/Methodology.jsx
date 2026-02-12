@@ -2,7 +2,7 @@ import Section from './Section';
 
 const Methodology = () => {
     return (
-        <Section id="methodology" title="Архітектура Системи">
+        <Section id="methodology" title="Архітектура Системи" aria-labelledby="methodology-title">
             <div className="methodology-content">
                 <p>
                     Проєкт реалізується за шаблоном <strong>Desktop Web Application</strong>, який поєднує Python-бекенд
@@ -11,12 +11,12 @@ const Methodology = () => {
                 </p>
 
                 <h3>Технологічний Стек</h3>
-                <table className="tech-table">
+                <table className="tech-table" aria-label="Технологічний стек проєкту">
                     <thead>
                         <tr>
-                            <th>Компонент</th>
-                            <th>Технологія</th>
-                            <th>Призначення</th>
+                            <th scope="col">Компонент</th>
+                            <th scope="col">Технологія</th>
+                            <th scope="col">Призначення</th>
                         </tr>
                     </thead>
                     <tbody>
