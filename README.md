@@ -1,16 +1,24 @@
-# React + Vite
+# Лендінг бакалаврської кваліфікаційної роботи
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Цей репозиторій містить лендінг для презентації бакалаврської роботи на тему: 
+**"Графічний інтерфейс налаштування динамічної маршрутизації на маршрутизаторах Cisco (з підключенням SSH)"**.
 
-Currently, two official plugins are available:
+## Про проєкт
+Проєкт розроблено студентом Сумського Державного Університету, факультету ЕлІТ. 
+Метою роботи є створення крос-платформного графічного інтерфейсу для спрощення конфігурації мережевого обладнання Cisco.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Технологічний стек
+- **Frontend**: React (Vite), Vanilla CSS.
+- **Backend (Концепція)**: Python (Eel, Paramiko/Netmiko).
+- **SEO/A11y**: Семантичний HTML, Schema.org, Open Graph.
 
-## React Compiler
+## Документація
+- [Список завдань та прогрес](docs/task.md)
+- [Технічний опис та результати (Walkthrough)](docs/walkthrough.md)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Як запустити локально
+1. Встановіть залежності: `npm install`
+2. Запустіть сервер розробки: `npm run dev`
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+© 2026 Гаврилов Максим Анатолійович
