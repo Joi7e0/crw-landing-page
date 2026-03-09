@@ -1,9 +1,9 @@
-import js from '@eslint/js'
-import globals from 'globals'
-import reactHooks from 'eslint-plugin-react-hooks'
-import reactRefresh from 'eslint-plugin-react-refresh'
-import stylisticJs from '@stylistic/eslint-plugin-js'
-import { defineConfig, globalIgnores } from 'eslint/config'
+import js from '@eslint/js';
+import globals from 'globals';
+import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
+import stylisticJs from '@stylistic/eslint-plugin-js';
+import { defineConfig, globalIgnores } from 'eslint/config';
 
 export default Object.assign(defineConfig([
   globalIgnores(['dist', 'node_modules', 'coverage', '.env*']),
@@ -35,4 +35,4 @@ export default Object.assign(defineConfig([
       '@stylistic/js/no-trailing-spaces': 'error',
     },
   },
-]))
+]));
