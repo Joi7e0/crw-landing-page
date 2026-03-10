@@ -13,12 +13,15 @@
 - **SEO/A11y**: Семантичний HTML, Schema.org, Open Graph.
 
 ## Документація
-- [Список завдань та прогрес](docs/task.md)
-- [Технічний опис та результати (Walkthrough)](docs/walkthrough.md)
+- [Структура проекту](docs/structure.md)
+- [Технічний опис лінтерів](docs/linting.md)
 
 ## Як запустити локально
 1. Встановіть залежності: `npm install`
 2. Запустіть сервер розробки: `npm run dev`
+3. Запустіть лінтер: `npm run lint`
+4. Запустіть лінтер з автофіксом: `npm run lint -- --fix`
+5. Запустіть type-checking: `npm run type-check`
 
 ---
 © 2026 Гаврилов Максим Анатолійович
